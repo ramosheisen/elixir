@@ -65,17 +65,19 @@ defmodule CursoElixir do
     concatenar(tail, concat)
   end
 
-  def trianguloPascal([], _salida), do: "Triangulo finalizado"
+  def trianguloPascal(1), do: (IO.puts("1"); [1])
 
-  def trianguloPascal([head | tail], salida \\ 0) do
-    result = salida + head
-    IO.inspect(Enum.map(1..head, fn(a) -> a * 1 end), label: "---------------->")
+  def trianguloPascal(n) do
+    #IO.inspect(Enum.map(1..head, fn(a) -> a * 1 end), label: "---------------->", limit: :infinity)
+    #IO.inspect(Enum.map(1..head, fn(a) -> a * 1 end), label: "---------------->")
 
-    trianguloPascal(tail, result)
+    list = trianguloPascal(n - 1)
+    newList = [1] ++ for(x <- 0..length(list)-1, do: Enum.at(list, x) + Enum.at(list, x+1, 0))
+    Enum.join(newList, " ") |> IO.puts
+    newList
   end
 
-  def triangulo(entrada) do
-    list = Enum.map(1..entrada, fn(a) -> a * 1 end)
-    IO.inspect(list, label: "---------------->")
-  end
+  def fibonacci(0) do 0 end
+  def fibonacci(1) do 1 end
+  def fibonacci(n) do fibonacci(n-1) + fibonacci(n-2) end
 end
