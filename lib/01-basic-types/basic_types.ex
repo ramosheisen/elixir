@@ -43,7 +43,7 @@ IO.puts("t or t = #{t or t}")
 IO.puts("f or f = #{f or f}")
 IO.puts("f or t = #{f or f}")
 list= [1,"2",:hola,4]
-tuple= {1,"2",:hola,4}
+_tuple= {1,"2",:hola,4}
 map= {1,"2",:hola,4}
 IO.puts("===functions===")
 IO.puts("is_boolean(t) = #{is_boolean(t)}")

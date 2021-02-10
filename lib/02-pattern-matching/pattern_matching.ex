@@ -7,7 +7,7 @@ IO.inspect(b, label: "->")
 
 IO.inspect(b, label: "->")
 
-[ %{ firstname: a } | b ] = personas = [%{firstname: "Carlos", lastname: "Lievano"},
+[ %{ firstname: a } | _b ] = _personas = [%{firstname: "Carlos", lastname: "Lievano"},
             %{firstname: "Andres", lastname: "Ramos"},
             %{firstname: "Camilo", lastname: "Perez"},
             %{firstname: "Laura", lastname: "Riascos"}]
