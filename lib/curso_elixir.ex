@@ -155,6 +155,4 @@ defmodule CursoElixir do
     List.last(list)
   end
 
-
-
 end
